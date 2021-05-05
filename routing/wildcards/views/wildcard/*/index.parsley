@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">
+<script>
+ fetch('https://3d83tr07-dev.preview.zesty.io/states.json')
+  .then(response => response.json())
+  .then(json => 
+    json.forEach( state => {
+    var res = state.State.toLowerCase();
+    console.log('{{request.pathPart(2)}}')
+    })
+)
+</script>
+<div class="container">
+    <h1> This is a wildcard! {{$render}}</h1>
+<hr/>
+<h2> Page path 1: {{request.pathPart(1)}} </h2>
+<hr/>
+<h3> Page path 2: {{request.pathPart(2)}} </h3>
+<hr/>
+</div> 
