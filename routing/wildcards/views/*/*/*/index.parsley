@@ -14,6 +14,7 @@
 (** We use this each loop to verify the city has a relationship to the state via the $state_zuid variable **)
 {{each cities as city where state ='{$state_zuid}' && city_name LIKE '{request.pathPart(2)}' }}
     {{ $exists = true}}
+    {{$city_name = {city.city_name} }}
 {{end-each}}
 
 (**
@@ -29,23 +30,29 @@
 
 <html>
     <head>
-<title>{{services.filter(service_name = '{request.pathPart(3)}').service_name}} Services in {{cities.filter(city_name = '{request.pathPart(2)}').city_name}}, {{states.filter(state_name = '{request.pathPart(1)}').state_name}}</title>
+        <title>{{services.filter(service_name = '{request.pathPart(3)}').service_name}} Services in {{$city_name}}, {{states.filter(state_name = '{request.pathPart(1)}').state_name}}</title>
+        <meta name="description" content="{{$city_name}}">
+        <meta property="og:title" content="{{$city_name}}">
+        <meta property="og:description" content=" {{$city_name}}">
+        <meta property="og:image" content="{{globals.logo.getImage()}}">
+        <link rel="icon" type="image/png" href="{{globals.logo.getImage()}}">
      </head>
-<body>
-<p>This is a code example that shows how to generate dynamic content using wildcard routes based upon 3 dimensions. The dimensions are state, city, service. The dimensions are content models. View the source code: <a href="https://github.com/zesty-io/demos/blob/main/routing/wildcards/views/*/*/*/index.parsley">https://github.com/zesty-io/demos/blob/main/routing/wildcards/views/*/*/*/index.parsley</a>
-<h1>Accessing each URL path part via <code>request.pathPart()</code></h1>
-<h2>Part 1: {{request.pathPart(1)}} from {{request.path()}}</h2>
-<h2>Part 2: {{request.pathPart(2)}} from {{request.path()}}</h2>
-<h2>Part 3: {{request.pathPart(3)}} from {{request.path()}}</h2>
-<hr/>
-<h1>Referencing Data Dynamically</h1>
-<p> We use the path parts to make dynamic Parsley direct data calls to the content models. For example:<code>`states.filter(state_name = '{request.pathPart(1)}').state_name`</code></p>
-<h2>Accessing the state: {{states.filter(state_name = '{request.pathPart(1)}').state_name}}</h2>
-<h2>Accessing the city: {{cities.filter(city_name = '{request.pathPart(2)}').city_name}}</h2>
-<h2>Accessing the service: {{services.filter(service_name = '{request.pathPart(3)}').service_name}}</h2>
-<hr/>
-<h1>For example, here is the Auto Layout of this service:</h1>
- <code>services.filter(service_name = '{request.pathPart(3)}').autoLayout()</code>
-<h2>Auto Layout Output: </h2>
-{{services.filter(service_name = '{request.pathPart(3)}').autoLayout()}}
-</body>
+    <body>
+        <p>This is a code example that shows how to generate dynamic content using wildcard routes based upon 3 dimensions. The dimensions are state, city, service. The dimensions are content models. View the source code: <a href="https://github.com/zesty-io/demos/blob/main/routing/wildcards/views/*/*/*/index.parsley">https://github.com/zesty-io/demos/blob/main/routing/wildcards/views/*/*/*/index.parsley</a>
+        <h1>Accessing each URL path part via <code>request.pathPart()</code></h1>
+        <h2>Part 1: {{request.pathPart(1)}} from {{request.path()}}</h2>
+        <h2>Part 2: {{request.pathPart(2)}} from {{request.path()}}</h2>
+        <h2>Part 3: {{request.pathPart(3)}} from {{request.path()}}</h2>
+        <hr/>
+        <h1>Referencing Data Dynamically</h1>
+        <p> We use the path parts to make dynamic Parsley direct data calls to the content models. For example:<code>`states.filter(state_name = '{request.pathPart(1)}').state_name`</code></p>
+        <h2>Accessing the state: {{states.filter(state_name = '{request.pathPart(1)}').state_name}}</h2>
+        <h2>Accessing the city: {{cities.filter(city_name = '{request.pathPart(2)}').city_name}}</h2>
+        <h2>Accessing the service: {{services.filter(service_name = '{request.pathPart(3)}').service_name}}</h2>
+        <hr/>
+        <h1>For example, here is the Auto Layout of this service:</h1>
+        <code>services.filter(service_name = '{request.pathPart(3)}').autoLayout()</code>
+        <h2>Auto Layout Output: </h2>
+        {{services.filter(service_name = '{request.pathPart(3)}').autoLayout()}}
+    </body>
+</html>
