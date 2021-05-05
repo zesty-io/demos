@@ -1,0 +1,2 @@
+Name,Zuid{{each states as state}}
+{{state.state_name}},{{state.zuid}}{{end-each}}

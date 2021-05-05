@@ -1,0 +1,23 @@
+<html>
+    <head>
+<title>{{services.filter(service_name = '{request.pathPart(3)}').service_name}} Services in {{cities.filter(city_name = '{request.pathPart(2)}').city_name}}, {{states.filter(state_name = '{request.pathPart(1)}').state_name}}</title>
+     </head>
+<body>
+
+<h1>Accessing each URL path part via <code>request.pathPart()</code></h1>
+<h2>Part 1: {{request.pathPart(1)}} from {{request.path()}}</h2>
+<h2>Part 2: {{request.pathPart(2)}} from {{request.path()}}</h2>
+<h2>Part 3: {{request.pathPart(3)}} from {{request.path()}}</h2>
+<hr/>
+<h1>Referencing Data Dynamically</h1>
+<p> We use the path parts to make dynamic Parsley direct data calls to the content models. For example:<code>`states.filter(state_name = '{request.pathPart(1)}').state_name`</code></p>
+<h2>Accessing the state: {{states.filter(state_name = '{request.pathPart(1)}').state_name}}</h2>
+
+<h2>Accessing the service: {{services.filter(service_name = '{request.pathPart(3)}').service_name}}</h2>
+<hr/>
+<h1>For example, here is the Auto Layout of this service:</h1>
+ <code>services.filter(service_name = '{request.pathPart(3)}').autoLayout()</code>
+<h2>Auto Layout Output: </h2>
+{{services.filter(service_name = '{request.pathPart(3)}').autoLayout()}}
+</body>
+{{cities.filter(city_name = '{request.pathPart(2)}').city_name}}
