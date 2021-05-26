@@ -7,3 +7,4 @@ A repository of code and implementation examples using popular technologies with
 - [NextJS Demos with Zesty.io](/nextjs/)
 - [Vue Demos with Zesty.io](/vue/)
 - [Nuxt Demos with Zesty.io](/nuxtjs/)
+- [Svelte Demos with Zesty.io](/svelte/)
