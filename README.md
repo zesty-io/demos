@@ -1,5 +1,5 @@
-# demos
-Examples of using Zesty.io via API, static page renderers, and hybridly
+# Zesty.io Demos
+This is a repository of Examples using Zesty.io APIs with popular technologies. 
 
 - [React Demos with Zesty.io](/react/)
 - [NextJS Demos with Zesty.io](/nextjs/)
