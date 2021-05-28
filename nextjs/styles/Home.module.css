@@ -1,0 +1,63 @@
+.container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.title img {
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.genres {
+  display: flex;
+}
+
+.genre {
+  padding: 16px;
+  cursor: pointer;
+}
+
+.genre.active {
+  font-weight: bold;
+}
+
+.shows {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.shows img {
+  margin: 4px;
+}
+
+.footer {
+  display: flex;
+  background-color: #e8e8e8;
+  padding: 20px;
+  border-radius: 5px;
+}
+.footer img {
+  margin: auto 0;
+  margin-right: 20px;
+}
