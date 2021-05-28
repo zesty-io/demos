@@ -23,11 +23,17 @@ export default function Home(props) {
         </ul>
         <div className="container-grid">
             <h1>ZFlix with Nextjs</h1>
+
             <h3>Fetching data</h3>
-            <p><a target="_blank" href="https://nextjs.org/learn/basics/data-fetching/getstaticprops-details"><strong>getStaticPros</strong></a> Next.js will run this function at build time. Whatever your return as props will be passed into the exported page.</p>
-            <p> <a target="_blank" href="https://nextjs.org/learn/basics/data-fetching/request-time"><strong>getServerSideProps</strong></a> This will be called at runtime during every request. So unlike getStaticProps, you will have the runtime data like query params, HTTP headers, and the req and res objects from API handlers.</p>
-            <p> <a target="_blank" href="https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation"><strong>getStaticPaths</strong></a> This will be called at runtime during every request. So unlike getStaticProps, you will have the runtime data like query params, HTTP headers, and the req and res objects from API handlers.</p>
+
+            <p><a title="getstaticprops-details" target="_blank" href="https://nextjs.org/learn/basics/data-fetching/getstaticprops-details"><strong>getStaticPros</strong></a> Next.js will run this function at build time. Whatever your return as props will be passed into the exported page.</p>
+
+            <p><a title="getServerSideProps" target="_blank" href="https://nextjs.org/learn/basics/data-fetching/request-time"><strong>getServerSideProps</strong></a> This will be called at runtime during every request. So unlike getStaticProps, you will have the runtime data like query params, HTTP headers, and the req and res objects from API handlers.</p>
+
+            <p> <a title="getStaticPaths" target="_blank" href="https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation"><strong>getStaticPaths</strong></a> This will be called at runtime during every request. So unlike getStaticProps, you will have the runtime data like query params, HTTP headers, and the req and res objects from API handlers.</p>
+
             <h4>Here we are fetching with nextjs `getServerSideProps` to Zflix `http://4q6k83l9-dev.preview.zesty.io/-/gql/movies_and_shows.json` API and mapping through to display image, title, and description</h4>
+
             <div className="card-container">
               {props.data.map((data, index) => (
               <div className="card" >
