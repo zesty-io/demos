@@ -1,0 +1,14 @@
+{
+  "name": "raspberry-pi-camera",
+  "version": "1.0.0",
+  "description": "Takes a picture using a Raspberry PI and sends to Zesty",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zesty-io/sdk": "^0.1.1"
+  }
+}
