@@ -3,4 +3,21 @@
 
 ## Zesty.io Next JS Demo
 
-Nuxt is the React framework for server side rendering static pages built with React https://nextjs.org/
+Nuxt is the React framework for server side rendering static pages built with React https://nextjs.org/ 
+
+This demo assumes you to know React and have some familiarity with NextJS 
+
+## Zesty.io Examples in this Demo
+
+- Static page generation with Zesty.io Content via `getStaticProps` using the zesty content model endpoints
+
+
+## Running this Example Locally
+
+The example assume you can use a terminal and have node and npm installed.
+
+1. Clone the Repo to a local folder
+2. Open terminal at root folder
+3. Run `npm install`
+4. Run `npm run dev`
+5. Open `localhost:3000` in your browser
