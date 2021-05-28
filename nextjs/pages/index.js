@@ -1,16 +1,19 @@
+import Layout from '../components/layout'
 import Head from 'next/head'
 import Link from 'next/link'
 
 
 export default function Home(props) {
   console.log(props.data);
+
+
   return (
-    <layout>
+    <>
       <Head>
         <title>Zesty.io NextJS Demo</title>
       </Head>
 
-      <main>
+      <main className="container">
         <h1 >
           Base homepage- doc links to come
         </h1>
@@ -18,7 +21,7 @@ export default function Home(props) {
         <ul>
             <li><a href="search-example">Search Example</a> with ZFlix movies</li>
         </ul>
-        <div sx={{variant: 'containers.page'}}>
+        <div >
       <h1>ZFlix with Nextjs</h1>
       <h3>Fetching data</h3>
 
@@ -30,31 +33,64 @@ export default function Home(props) {
 
       <h4>Here we are fetching with nextjs `getServerSideProps` to Zflix `http://4q6k83l9-dev.preview.zesty.io/-/gql/movies_and_shows.json` API and mapping through to display image, title, and description</h4>
 
-      <div sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
-        {props.data.map(data => (
-          <div sx={{width: '33%', p: 3}}>
-            <Link key={data.id} href="/notes/[id]" as={`/notes/${data.uri}`}>
-              <a sx={{textDecoration: 'none', cursor: 'pointer'}}>
-                <div sx={{variant: 'containers.card',}}>
-                  <strong>{data.title}</strong>
-          <img
-              height="auto"
-              width="200px"
-              max-width="auto"
-              src={data.film_logo}
-            />
-                <p>  {data.meta_description}</p>
+      <div className="card-container">
+        {props.data.map((data, index) => (
+          <div className="card" >
+              <a target="_blank" href={data.poster}>
+                <div className='card-content' >
+                  <h1>{data.title}</h1>
+                  <img
+                      height="auto"
+                      width="200px"
+                      max-width="auto"
+                      src={data.film_logo}
+                    />
+                    <p> {data.meta_description}</p>
                 </div>
               </a>
-            </Link>
           </div>
         ))}
       </div>
     </div>
 
       </main>
+      <style jsx>{`
+            a{
+              text-decoration: none;
+              color: #000;
+            }
 
-      </layout>
+          .container{
+            width: 100%;
+            background-color: #f8fafe;
+
+            display: flex;
+            flex-direction: column;
+            padding: 80px 75px;
+          }
+            .card-container {
+              grid-template-columns: repeat(4, 400px);
+              grid-template-rows: repeat(4, 400px);
+              display: grid;
+              gap: 32px;
+
+
+            }
+            .card{
+              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+              background-color: #efefef;
+              border: 2px solid #000;
+              border-radius: 5px;
+              padding: 16px;
+            }
+            .card-content{
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+            }
+
+            `}</style>
+      </>
   )
 }
 
