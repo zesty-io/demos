@@ -62,26 +62,31 @@ export default function Home(props) {
 
           .container{
             width: 100%;
-            background-color: #f8fafe;
-
+            background-color: #f2f4fb;
             display: flex;
             flex-direction: column;
             padding: 80px 75px;
           }
-            .card-container {
-              grid-template-columns: repeat(4, 400px);
-              grid-template-rows: repeat(4, 400px);
-              display: grid;
-              gap: 32px;
+          .card-container {
+            grid-template-columns: repeat(4, 400px);
+            grid-template-rows: repeat(4, 400px);
+            display: grid;
+            gap: 32px;
+
+          }
 
 
-            }
             .card{
               box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
               background-color: #efefef;
-              border: 2px solid #000;
-              border-radius: 5px;
               padding: 16px;
+              border-radius: 15px;
+             box-shadow: 0px 10px 15px -5px rgb(0 0 0 / 65%);
+             transition: all .2s ease-in-out;
+            }
+
+            .card:hover{
+              transform: scale(1.1);
             }
             .card-content{
               display: flex;
