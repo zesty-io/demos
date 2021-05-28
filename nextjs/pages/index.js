@@ -7,6 +7,7 @@ export default function Home(props) {
   console.log(props.data);
 
 
+
   return (
     <>
       <Head>
