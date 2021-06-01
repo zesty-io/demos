@@ -75,15 +75,13 @@ export default function Home(props) {
       </Footer>
 
       <style jsx>{`
-        a {
-          text-decoration: none;
-          color: #000;
-        }
-
         .container {
           width: 100%;
           background-color: #f2f4fb;
+          display: flex;
+          flex-direction: column;
           padding: 32px;
+          height: 100vh;
         }
         .container-grid {
           align-self: center;
