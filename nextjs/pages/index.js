@@ -16,7 +16,7 @@ export default function Home(props) {
         <div className='container-grid'>
           <div className='card-container'>
             {props.data.map((data, index) => (
-              <div className='card'>
+              <div key={data.title} className='card'>
                 <a target='_blank' href={data.poster}>
                   <div className='card-content'>
                     <h1>{data.title}</h1>

@@ -1,45 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 import { getPost } from '../../api/posts';
 import Layout from '../../components/Layout';
 import DeveloperHint from '../../components/DeveloperHint'
+import styles from './Blog.module.css'
 
-const Wrapper = styled.div`
-  padding: 3rem;
-  max-width: 750px;
-  margin: 0 auto;
-  @media (max-width: 750px) {
-    width: 100%;
-    padding: 1rem;
-  }
-  h1 {
-    color: #222;
-    font-weight: bold;
-    font-size: 1.75rem;
-    line-height: 35px;
-    font-family: 'PT Sans', sans-serif;
-    text-transform: capitalize;
-    margin: 0;
-  }
-  p {
-    line-height: 28px;
-    color: #666;
-    font-family: 'PT Sans', sans-serif;
-  }
-  .code {
-    background: gray;
-    padding: 20px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    max-width: 100%;
-    overflow: scroll;
-    line-height: 170%;
-  }
-`;
+
 
 const PostPage = ({ post }) => (
   <Layout>
-    <Wrapper>
+    <div className={styles.Blog}>
       <h1>{post.title}</h1>
       <div
         className='text-container'
@@ -84,7 +53,7 @@ const PostPage = ({ post }) => (
           </div>
       </div>
         </DeveloperHint>
-    </Wrapper>
+    </div>
   </Layout>
 );
 

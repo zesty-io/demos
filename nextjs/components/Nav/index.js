@@ -1,8 +1,6 @@
-import Link from 'next/link'
-import styled from 'styled-components'
-import styles from "./Nav.module.css"
+import Link from 'next/link';
 
-
+import styles from './Nav.module.css';
 
 const Nav = () => (
   <div className={styles.Nav}>
@@ -21,4 +19,4 @@ const Nav = () => (
   </div>
 );
 
-export default Nav
+export default Nav;

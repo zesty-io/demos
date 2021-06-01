@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './DeveloperHint.module.css';
 
-function Footer(props) {
+function DeveloperHint(props) {
     return (
       <div className={styles.footerGlobal}>
         <div>
@@ -14,4 +14,4 @@ function Footer(props) {
     );
 }
 
-export default Footer
+export default DeveloperHint

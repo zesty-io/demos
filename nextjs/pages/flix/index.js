@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import cx from 'classnames';
-import Footer from '../../components/DeveloperHint';
+import DeveloperHint from '../../components/DeveloperHint';
 import styles from '../../styles/Home.module.css';
 
 export default function Home({ genres, shows, showsByGenre }) {
@@ -67,7 +67,7 @@ export default function Home({ genres, shows, showsByGenre }) {
         </div>
       </main>
 
-      <Footer>
+      <DeveloperHint>
         <p>
           <strong>Zesty.io Hint:</strong> This is an example using the Zesty
           Instant API. The react component in NextJS, uses the getStaticProps()
@@ -89,7 +89,7 @@ export default function Home({ genres, shows, showsByGenre }) {
           </a>{' '}
           to normalize the data into lookup table keyed by ZUID.
         </p>
-      </Footer>
+      </DeveloperHint>
     </div>
   );
 }
