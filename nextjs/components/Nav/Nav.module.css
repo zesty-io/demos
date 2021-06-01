@@ -1,0 +1,16 @@
+  .Nav{
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      background: #387EF5 ;
+  }
+
+  .Nav a {
+    padding: 0 15px;
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  .Nav a:hover{
+    text-decoration: underline;
+  }

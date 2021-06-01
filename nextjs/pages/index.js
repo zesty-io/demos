@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Footer from '../components/Footer';
+import DeveloperHint from '../components/DeveloperHint';
 
 export default function Home(props) {
   console.log(props.data);
@@ -34,7 +34,7 @@ export default function Home(props) {
           </div>
         </div>
       </main>
-      <Footer>
+      <DeveloperHint>
         <p>
           <strong>Zesty.io Hint:</strong>
           <a
@@ -68,11 +68,16 @@ export default function Home(props) {
           headers, and the req and res objects from API handlers. Here we are
           fetching with nextjs `getServerSideProps` to Zflix{' '}
           <strong>
-            http://4q6k83l9-dev.preview.zesty.io/-/gql/movies_and_shows.json
+            <a
+              target='_blank'
+              href=' http://4q6k83l9-dev.preview.zesty.io/-/gql/movies_and_shows.json'
+            >
+              API from Zesty.io{' '}
+            </a>
           </strong>{' '}
           API and mapping through to display image, title, and description
         </p>
-      </Footer>
+      </DeveloperHint>
 
       <style jsx>{`
         .container {

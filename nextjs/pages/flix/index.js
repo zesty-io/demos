@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import cx from 'classnames';
-import Footer from '../../components/Footer';
+import Footer from '../../components/DeveloperHint';
 import styles from '../../styles/Home.module.css';
 
 export default function Home({ genres, shows, showsByGenre }) {
