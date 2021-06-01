@@ -15,10 +15,19 @@ const Wrapper = styled.nav`
 
 const Nav = () => (
   <Wrapper>
-    <Link href='/'><a>Home</a></Link>
-
-
+    <Link href='/'>
+      <a>Home</a>
+    </Link>{' '}
+    <Link href='/search-example'>
+      <a>Search Example</a>
+    </Link>
+    <Link href='/flix'>
+      <a>Flix</a>
+    </Link>
+    <Link href='/blog'>
+      <a>Blog</a>
+    </Link>
   </Wrapper>
-)
+);
 
 export default Nav

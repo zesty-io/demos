@@ -1,4 +1,5 @@
-import Head from "next/head";
+import Head from 'next/head';
+import styled from 'styled-components';
 
 export default function Home(props) {
   console.log(props.data);
@@ -9,53 +10,46 @@ export default function Home(props) {
         <title>Zesty.io NextJS Demo</title>
       </Head>
 
-      <main className="container">
-        <h1>Base homepage- doc links to come</h1>
-        <h4>Demos</h4>
-        <ul>
-          <li>
-            <a href="search-example">Search Example</a> with ZFlix movies
-          </li>
-        </ul>
-        <div className="container-grid">
+      <main className='container'>
+        <div className='container-grid'>
           <h1>ZFlix with Nextjs</h1>
 
           <h3>Fetching data</h3>
 
           <p>
             <a
-              title="getstaticprops-details"
-              target="_blank"
-              href="https://nextjs.org/learn/basics/data-fetching/getstaticprops-details"
+              title='getstaticprops-details'
+              target='_blank'
+              href='https://nextjs.org/learn/basics/data-fetching/getstaticprops-details'
             >
               <strong>getStaticPros</strong>
-            </a>{" "}
+            </a>{' '}
             Next.js will run this function at build time. Whatever your return
             as props will be passed into the exported page.
           </p>
 
           <p>
             <a
-              title="getServerSideProps"
-              target="_blank"
-              href="https://nextjs.org/learn/basics/data-fetching/request-time"
+              title='getServerSideProps'
+              target='_blank'
+              href='https://nextjs.org/learn/basics/data-fetching/request-time'
             >
               <strong>getServerSideProps</strong>
-            </a>{" "}
+            </a>{' '}
             This will be called at runtime during every request. So unlike
             getStaticProps, you will have the runtime data like query params,
             HTTP headers, and the req and res objects from API handlers.
           </p>
 
           <p>
-            {" "}
+            {' '}
             <a
-              title="getStaticPaths"
-              target="_blank"
-              href="https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation"
+              title='getStaticPaths'
+              target='_blank'
+              href='https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation'
             >
               <strong>getStaticPaths</strong>
-            </a>{" "}
+            </a>{' '}
             This will be called at runtime during every request. So unlike
             getStaticProps, you will have the runtime data like query params,
             HTTP headers, and the req and res objects from API handlers.
@@ -67,16 +61,16 @@ export default function Home(props) {
             API and mapping through to display image, title, and description
           </h4>
 
-          <div className="card-container">
+          <div className='card-container'>
             {props.data.map((data, index) => (
-              <div className="card">
-                <a target="_blank" href={data.poster}>
-                  <div className="card-content">
+              <div className='card'>
+                <a target='_blank' href={data.poster}>
+                  <div className='card-content'>
                     <h1>{data.title}</h1>
                     <img
-                      height="auto"
-                      width="200px"
-                      max-width="auto"
+                      height='auto'
+                      width='200px'
+                      max-width='auto'
                       src={data.film_logo}
                     />
                     <p> {data.meta_description}</p>
@@ -87,6 +81,7 @@ export default function Home(props) {
           </div>
         </div>
       </main>
+
       <style jsx>{`
         a {
           text-decoration: none;
@@ -104,9 +99,8 @@ export default function Home(props) {
           align-self: center;
         }
         .card-container {
-          grid-template-columns: repeat(4, 400px);
-          grid-template-rows: repeat(4, 400px);
           display: grid;
+          grid-template-columns: repeat(auto-fill, 420px);
           gap: 32px;
         }
 
@@ -134,12 +128,12 @@ export default function Home(props) {
 
 export async function getServerSideProps() {
   const res = await fetch(
-    "http://4q6k83l9-dev.preview.zesty.io/-/gql/movies_and_shows.json"
+    'http://4q6k83l9-dev.preview.zesty.io/-/gql/movies_and_shows.json'
   );
   let data = await res.json();
   console.log(data);
   if (!data.ok) {
-    console.error("data not found");
+    console.error('data not found');
   }
   return {
     props: {
