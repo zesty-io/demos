@@ -1,11 +1,11 @@
 import Nav from '../components/Nav'
-import Footer from '../components/Footer'
+import "../styles/styles.css"
 function MyApp({ Component, pageProps }) {
   return (
     <div>
       <Nav />
       <Component {...pageProps} />
-      <Footer />
+
     </div>
   );
 }

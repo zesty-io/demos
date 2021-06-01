@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styled from 'styled-components';
+import Footer from '../components/Footer';
 
 export default function Home(props) {
   console.log(props.data);
@@ -11,56 +11,9 @@ export default function Home(props) {
       </Head>
 
       <main className='container'>
+        <h1>ZFlix with Nextjs</h1>
+        <h3>Fetching data</h3>
         <div className='container-grid'>
-          <h1>ZFlix with Nextjs</h1>
-
-          <h3>Fetching data</h3>
-
-          <p>
-            <a
-              title='getstaticprops-details'
-              target='_blank'
-              href='https://nextjs.org/learn/basics/data-fetching/getstaticprops-details'
-            >
-              <strong>getStaticPros</strong>
-            </a>{' '}
-            Next.js will run this function at build time. Whatever your return
-            as props will be passed into the exported page.
-          </p>
-
-          <p>
-            <a
-              title='getServerSideProps'
-              target='_blank'
-              href='https://nextjs.org/learn/basics/data-fetching/request-time'
-            >
-              <strong>getServerSideProps</strong>
-            </a>{' '}
-            This will be called at runtime during every request. So unlike
-            getStaticProps, you will have the runtime data like query params,
-            HTTP headers, and the req and res objects from API handlers.
-          </p>
-
-          <p>
-            {' '}
-            <a
-              title='getStaticPaths'
-              target='_blank'
-              href='https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation'
-            >
-              <strong>getStaticPaths</strong>
-            </a>{' '}
-            This will be called at runtime during every request. So unlike
-            getStaticProps, you will have the runtime data like query params,
-            HTTP headers, and the req and res objects from API handlers.
-          </p>
-
-          <h4>
-            Here we are fetching with nextjs `getServerSideProps` to Zflix
-            `http://4q6k83l9-dev.preview.zesty.io/-/gql/movies_and_shows.json`
-            API and mapping through to display image, title, and description
-          </h4>
-
           <div className='card-container'>
             {props.data.map((data, index) => (
               <div className='card'>
@@ -81,6 +34,45 @@ export default function Home(props) {
           </div>
         </div>
       </main>
+      <Footer>
+        <p>
+          <strong>Zesty.io Hint:</strong>
+          <a
+            title='getstaticprops-details'
+            target='_blank'
+            href='https://nextjs.org/learn/basics/data-fetching/getstaticprops-details'
+          >
+            <strong>getStaticPros</strong>
+          </a>{' '}
+          Next.js will run this function at build time. Whatever your return as
+          props will be passed into the exported page.
+          <a
+            title='getServerSideProps'
+            target='_blank'
+            href='https://nextjs.org/learn/basics/data-fetching/request-time'
+          >
+            <strong>getServerSideProps</strong>
+          </a>{' '}
+          This will be called at runtime during every request. So unlike
+          getStaticProps, you will have the runtime data like query params, HTTP
+          headers, and the req and res objects from API handlers.{' '}
+          <a
+            title='getStaticPaths'
+            target='_blank'
+            href='https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation'
+          >
+            <strong>getStaticPaths</strong>
+          </a>{' '}
+          This will be called at runtime during every request. So unlike
+          getStaticProps, you will have the runtime data like query params, HTTP
+          headers, and the req and res objects from API handlers. Here we are
+          fetching with nextjs `getServerSideProps` to Zflix{' '}
+          <strong>
+            http://4q6k83l9-dev.preview.zesty.io/-/gql/movies_and_shows.json
+          </strong>{' '}
+          API and mapping through to display image, title, and description
+        </p>
+      </Footer>
 
       <style jsx>{`
         a {
@@ -91,16 +83,14 @@ export default function Home(props) {
         .container {
           width: 100%;
           background-color: #f2f4fb;
-          display: flex;
-          flex-direction: column;
-          padding: 80px 75px;
+          padding: 32px;
         }
         .container-grid {
           align-self: center;
         }
         .card-container {
           display: grid;
-          grid-template-columns: repeat(auto-fill, 420px);
+          grid-template-columns: repeat(auto-fill, minmax(350px, auto));
           gap: 32px;
         }
 

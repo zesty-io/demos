@@ -1,11 +1,13 @@
 import React from 'react'
+import styles from '../../styles/Home.module.css';
 
-function Footer() {
+function Footer(props) {
     return (
-        <div>
-        <h1>Footer</h1>
-        </div>
-    )
+      <div className={styles.footer}>
+        <img width={70} src={'https://brand.zesty.io/zesty-io-logo.png'} />
+        {props.children}
+      </div>
+    );
 }
 
 export default Footer
