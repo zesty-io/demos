@@ -1,0 +1,34 @@
+.Blog {
+	 padding: 3rem;
+	 max-width: 750px;
+	 margin: 0 auto;
+}
+ @media (max-width: 750px) {
+	 .Blog {
+		 width: 100%;
+		 padding: 1rem;
+	}
+}
+ .Blog h1 {
+	 color: #222;
+	 font-weight: bold;
+	 font-size: 1.75rem;
+	 line-height: 35px;
+	 font-family: 'PT Sans', sans-serif;
+	 text-transform: capitalize;
+	 margin: 0;
+}
+ .Blog p {
+	 line-height: 28px;
+	 color: #666;
+	 font-family: 'PT Sans', sans-serif;
+}
+ .Blog .code {
+	 background: gray;
+	 padding: 20px;
+	 white-space: pre-wrap;
+	 word-wrap: break-word;
+	 max-width: 100%;
+	 overflow: scroll;
+	 line-height: 170%;
+}
