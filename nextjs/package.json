@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p ${PORT:=3000}",
+    "build-container": "gcloud builds submit --tag gcr.io/zesty-dev/nextjs-zflix --project zesty-dev",
+    "deploy-cloud-run": "gcloud run deploy --image gcr.io/zesty-dev/nextjs-zflix --project zesty-dev --platform managed"
   },
   "dependencies": {
     "next": "^10.0.0",
