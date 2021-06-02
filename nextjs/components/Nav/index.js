@@ -16,6 +16,10 @@ const Nav = () => (
     <Link href='/blog'>
       <a>Blog</a>
     </Link>
+    <img
+      src='https://brand.zesty.io/zesty-io-logo-horizontal-light.png'
+      alt='Zesty.io'
+    />
   </div>
 );
 

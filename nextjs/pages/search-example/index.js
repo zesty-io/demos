@@ -1,7 +1,7 @@
 import Layout from '../../components/Layout';
 import { useState } from 'react';
 import Head from 'next/head';
-import DeveloperHint from '../../components/DeveloperHint'
+import DeveloperHint from '../../components/DeveloperHint';
 
 function Posts(props) {
   const [searchVal, setSearchVal] = useState('');
@@ -57,7 +57,7 @@ function Posts(props) {
         ))}
         <DeveloperHint>
           <p>
-          <strong>Zesty.io Hint:</strong>
+            <strong>Zesty.io Hint:</strong>
             This NextJS example uses an endpoint automatically generating from a
             Zesty.io content instance{' '}
             <a
@@ -74,6 +74,12 @@ function Posts(props) {
             >
               getStaticProps
             </a>{' '}
+            <a
+              target='_blank'
+              href='https://github.com/zesty-io/demos/blob/main/nextjs/pages/search-example/index.js'
+            >
+              View Next.js source file here
+            </a>
           </p>
         </DeveloperHint>
       </div>

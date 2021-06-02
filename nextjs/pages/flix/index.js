@@ -87,7 +87,13 @@ export default function Home({ genres, shows, showsByGenre }) {
           <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce'>
             array.reduce
           </a>{' '}
-          to normalize the data into lookup table keyed by ZUID.
+          to normalize the data into lookup table keyed by ZUID.{' '}
+          <a
+            target='_blank'
+            href='https://github.com/zesty-io/demos/blob/main/nextjs/pages/flix/index.js'
+          >
+            View Next.js source file here
+          </a>
         </p>
       </DeveloperHint>
     </div>
