@@ -1,6 +1,12 @@
 export default function Show({ show }) {
   return (
-    <div>
+    <div className="container">
+      <style jsx>{`
+        .container {
+          max-width: 36rem;
+          margin:auto;
+        }
+      `}</style>
       Show Details:
       <div>{show.seo_meta_title}</div>
       <div>{show.seo_meta_description}</div>

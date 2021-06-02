@@ -8,6 +8,7 @@
   max-width: 8rem;
   height: auto;
   margin-left: auto;
+  align-self: center;
 }
 
 .Nav a {

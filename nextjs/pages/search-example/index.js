@@ -122,6 +122,7 @@ function Posts(props) {
           padding: 20px;
           display: flex;
           background: white;
+          justify-content:center;
         }
         .fake-google-header input,
         .fake-google-header p {
@@ -129,6 +130,9 @@ function Posts(props) {
         }
         .fake-google-header p {
           color: grey;
+        }
+        .fake-google-header img {
+          align-self: center
         }
         p {
           font-size: 14px;

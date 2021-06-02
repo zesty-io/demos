@@ -14,10 +14,19 @@ export default function Home({ genres, shows, showsByGenre }) {
       <Link key={key} href={`/flix/${shows[key].content._path_part}`}>
         <a>
           <img
+          className="imgHover"
             width={220}
             height={160}
             src={shows[key].content.poster.data[0].url}
           />
+          <style jsx>{`
+          .imgHover {
+            transition: transform .5s ease;
+          }
+          .imgHover:hover {
+            transform: scale(1.05);
+          }
+        `}</style>
         </a>
       </Link>
     );

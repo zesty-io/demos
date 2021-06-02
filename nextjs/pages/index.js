@@ -111,6 +111,21 @@ export default function Home(props) {
           box-shadow: 0px 10px 15px -5px rgb(0 0 0 / 65%);
           transition: all 0.2s ease-in-out;
         }
+        .card a {
+          text-decoration: none;
+          text-align: center
+        }
+        .card a h1 {
+          text-decoration: none !important;
+          color: rgb(33, 33, 33);
+          text-transform: uppercase;
+          background: lightgray;
+          width: 100%;
+          margin: 10px 0;
+        }
+        .card a p {
+          color: rgb(92, 92, 92);
+        }
 
         .card:hover {
           transform: scale(1.1);
