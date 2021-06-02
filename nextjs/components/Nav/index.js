@@ -4,17 +4,23 @@ import styles from './Nav.module.css';
 
 const Nav = () => (
   <div className={styles.Nav}>
+    <a
+      target='_blank'
+      href='https://github.com/zesty-io/demos/tree/main/nextjs'
+    >
+      Nextjs Demo
+    </a>
     <Link href='/'>
-      <a>Home</a>
+      <a>Home (ServerSideProps) </a>
     </Link>{' '}
     <Link href='/search-example'>
-      <a>Search Example</a>
+      <a>Search Example (StaticProps)</a>
     </Link>
     <Link href='/flix'>
-      <a>Flix</a>
+      <a>Flix (StaticProps Dynamic Routes) </a>
     </Link>
     <Link href='/blog'>
-      <a>Blog</a>
+      <a>Blog (ServerProps Dynamic Routes)</a>
     </Link>
     <img
       src='https://brand.zesty.io/zesty-io-logo-horizontal-light.png'
