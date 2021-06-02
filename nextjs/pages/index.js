@@ -42,7 +42,7 @@ export default function Home(props) {
             target='_blank'
             href='https://nextjs.org/learn/basics/data-fetching/getstaticprops-details'
           >
-            <strong>getStaticPros</strong>
+            getStaticPros
           </a>{' '}
           Next.js will run this function at build time. Whatever your return as
           props will be passed into the exported page.
@@ -51,7 +51,7 @@ export default function Home(props) {
             target='_blank'
             href='https://nextjs.org/learn/basics/data-fetching/request-time'
           >
-            <strong>getServerSideProps</strong>
+            getServerSideProps
           </a>{' '}
           This will be called at runtime during every request. So unlike
           getStaticProps, you will have the runtime data like query params, HTTP
@@ -61,21 +61,27 @@ export default function Home(props) {
             target='_blank'
             href='https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation'
           >
-            <strong>getStaticPaths</strong>
+            getStaticPaths
           </a>{' '}
           This will be called at runtime during every request. So unlike
           getStaticProps, you will have the runtime data like query params, HTTP
           headers, and the req and res objects from API handlers. Here we are
           fetching with nextjs `getServerSideProps` to Zflix{' '}
-          <strong>
+
             <a
               target='_blank'
               href=' http://4q6k83l9-dev.preview.zesty.io/-/gql/movies_and_shows.json'
             >
-              API from Zesty.io{' '}
+              API from Zesty.io
             </a>
-          </strong>{' '}
-          API and mapping through to display image, title, and description
+          {' '}
+          API and mapping through to display image, title, and description{' '}
+          <a
+            target='_blank'
+            href='https://github.com/zesty-io/demos/blob/main/nextjs/pages/index.js'
+          >
+            View Next.js source file here
+          </a>
         </p>
       </DeveloperHint>
 

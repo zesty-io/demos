@@ -20,7 +20,7 @@ const IndexPage = ({ posts }) => (
           target='_blank'
           href='https://4q6k83l9-dev.preview.zesty.io/my/custom/endpoint.json?limit=5'
         >
-          <strong>Custom API Endpoint</strong>
+          Custom API Endpoint
         </a>{' '}
         to load the data, and uses a javascript array map to power the search.
         Data is preloaded using a NextJS function{' '}
@@ -29,8 +29,20 @@ const IndexPage = ({ posts }) => (
           target='_blank'
           href='https://nextjs.org/learn/basics/data-fetching/request-time'
         >
-          <strong>getServerSideProps</strong>
+          getServerSideProps
         </a>{' '}
+        <a
+          target='_blank'
+          href='https://github.com/zesty-io/demos/blob/main/nextjs/pages/blog/index.js'
+        >
+           View Next.js source file here
+        </a>
+        <a
+          target='_blank'
+          href='https://github.com/zesty-io/demos/blob/main/nextjs/api/posts/index.js'
+        >
+          Post API
+        </a>
       </p>
     </DeveloperHint>
   </Layout>

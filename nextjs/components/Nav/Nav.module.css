@@ -4,6 +4,11 @@
   display: flex;
   background: #387ef5;
 }
+.Nav img {
+  max-width: 8rem;
+  height: auto;
+  margin-left: auto;
+}
 
 .Nav a {
   padding: 0 15px;
