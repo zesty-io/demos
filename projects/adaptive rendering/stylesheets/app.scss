@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
+/** Theme **/
+
+$theme-white: #fff;
+$theme-black: #000;
+$theme-purple: #50507f;
+$theme-pink: #e15f81;
+$theme-violet: #644fb1;
+$theme-grey: #5c5c5c;
+$theme-light-grey: #ededed;
+$theme-dark-grey: #8a8a8a;
+$theme-light-silver: #f7f7f7;
+$theme-dark-blue: #2e3154;
+$theme-blue: #4a50a0;
+$theme-bright-red: #f7030c;
+$theme-bright-yellow: #f19a1a;
+
+/** Dimensions **/
+
+$container-width: 100vw;
+$container-height: 100vh;
+
+$mobile-width: 18rem;
+$mobile-height: 30rem;
+$mobile-padding: .8rem;
+$mobile-border-radius: 1.4rem;
+
+$content-width: 100%;
+$content-height: 100%;
+$content-padding: .8rem;
+$content-border-radius: .7rem;
+
+$card-padding: .7rem;
+$card-border-radius: .5rem;
+
+/** Font Sizes **/
+$h1: 40px;
+$h2: 35px;
+$h3: 30px;
+$h4: 25px;
+$h5: 20px;
+$regular17: 17px;
+$regular: 16px;
+$regular15: 15px;
+$medium: 12px;
+$small: 9px;
+$tiny: 7px;
+
+/** mixins **/
+
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-container {
+ // width: $container-width;
+//  height: $container-height;
+ // @include flex();
+  .mobile {
+    width: $mobile-width;
+    height: $mobile-height;
+//   border: 3px solid $theme-purple;
+    border-radius: $mobile-border-radius;
+//    padding: $mobile-padding;
+//    box-shadow: 40px 50px 40px 0 rgba(0, 0, 0, 0.1);
+    .content {
+      position: relative;
+      width: $content-width;
+      height: $content-height;
+      border-radius: $content-border-radius;
+      box-shadow: 5px 5px 9px 3px rgba(0, 0, 0, 0.1),
+        -5px 0 9px 3px rgba(0, 0, 0, 0.05);
+      background-color: $theme-light-silver;
+      padding: 10px;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+  display: none;
+}
+      @include flex(flex-start);
+      flex-direction: column;
+      .cards {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: $theme-white;
+        border-radius: $content-border-radius;
+        padding: $content-padding;
+        overflow: hidden;
+        .title {
+          font-size: $medium;
+          margin: 10px 0;
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: 200;
+        }
+        .card-wrapper {
+          position: absolute;
+          width: calc(100% - (2 * #{$content-padding}));
+          height: calc(100% - 35px - (2 * .8rem));
+          //overflow-y: scroll;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          .card {
+            position: absolute;
+            width: 100%;
+            height: 120px;
+            margin-bottom: 10px;
+            padding: $card-padding;
+            border-radius: $card-border-radius;
+            @include flex(center, flex-end);
+            flex-direction: column;
+            box-shadow: 3px 3px 6px 0 rgba(10,0,10,.3);
+            @for $i from 1 through 4 {
+              &:nth-child(#{$i + 1}) {
+                top: #{$i * 130}px;
+              }
+            }
+            .logo {
+              position: relative;
+              width: 40px;
+              height: 20px;
+              @include flex(flex-end);
+              .circle {
+                position: absolute;
+                width: 20px;
+                height: 100%;
+                border-radius: 50%;
+                &.yellow{
+                  background-color: $theme-bright-yellow;
+                }
+                &.red{
+                  background-color: $theme-bright-red;
+                }
+                &:last-child{
+                  left: 10px;
+                }
+              }
+            }
+            .details {
+              width: 100%;
+              padding-top: 20px;
+              letter-spacing: 1px;
+              .number {
+                color: $theme-white;
+                text-shadow: 2px 2px 2px $theme-black;
+                -webkit-mask-image: linear-gradient(
+                  -75deg,
+                  rgba(0, 0, 0, .6) 30%,
+                  #000 50%,
+                  rgba(0, 0, 0, .6) 70%
+                );
+                -webkit-mask-size: 200%;
+                animation: shine 3s linear infinite;
+              }
+              .bottom {
+                @include flex(flex-start);
+                margin-top: 5px;
+                .name,
+                .expiry {
+                  color: $theme-light-silver;
+                  font-size: $small;
+                }
+                .expiry {
+                  margin-left: 10px;
+                }
+              }
+            }
+            &.violet {
+              background: radial-gradient(
+                at top left,
+                $theme-pink,
+                $theme-violet
+              );
+            }
+            &.blue {
+              background: radial-gradient(
+                at top left,
+                $theme-blue,
+                $theme-dark-blue
+              );
+            }
+            &.black {
+              background: radial-gradient(
+                at top left,
+                $theme-grey,
+                $theme-black
+              );
+            }
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          &.active{
+            top: 0;
+            height: 100%;
+            //overflow-y: hidden;
+          }
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+      .transactions {
+        position: absolute;
+        top: $content-height;
+        width: calc(100% - (2 * #{$content-padding}));
+        height: calc(100% - 152px);
+        overflow-y: scroll;
+        border-radius: 0.5rem;
+        background-color: $theme-white;
+        opacity: 0;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        .transaction {
+          padding: 10px;
+          @include flex();
+          .image-wrapper {
+            width: 15%;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .vendor-details {
+            width: 55%;
+            .title {
+              font-size: $medium;
+              margin-bottom: 3px;
+            }
+            .description {
+              color: $theme-grey;
+              font-size: $small;
+            }
+          }
+          .transaction-details {
+            width: 30%;
+            @include flex(flex-end, flex-end);
+            flex-direction: column;
+            .price {
+              font-size: $medium;
+              margin-bottom: 3px;
+            }
+            .date {
+              color: $theme-grey;
+              font-size: $tiny;
+            }
+          }
+          &:not(:last-child) {
+            border-bottom: 1px solid $theme-light-grey;
+          }
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+

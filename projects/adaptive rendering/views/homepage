@@ -1,0 +1,75 @@
+<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<div>
+							<img style="float:right;width:70px" src="{{this.image.getImage()}}"/>
+							</div>
+						<div class="inner">
+							<h1><b>Zesty</b>Adaptive</h1>
+							<h2>{{this.title}}</h2>
+							{{this.content}}
+							<ul class="actions">
+								<li><a href="https://zesty.io" class="button special" >Learn more at Zesty.io</a></li>
+							</ul>
+							<!--
+							<hr />
+							<h3>Form Stuff</h3>
+							<form method="post" action="#">
+								<div class="field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="department">Department</label>
+									<div class="select-wrapper">
+										<select name="department" id="department">
+											<option value="">-</option>
+											<option value="sales">Sales</option>
+											<option value="tech">Tech Support</option>
+											<option value="null">/dev/null</option>
+										</select>
+									</div>
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="4"></textarea>
+								</div>
+								<div class="field">
+									<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
+								</div>
+								<div class="field">
+									<label>But are you a robot?</label>
+									<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
+									<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
+								</div>
+								<ul class="actions">
+									<li><a href="#" class="button">Get Started</a></li>
+								</ul>
+							</form>
+							-->
+						</div>
+						<footer>
+							<ul class="icons">
+								<li><a href="https://twitter.com/zestyio" class="icon"><i class="fab fa-twitter"></i><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.facebook.com/zestyio" class="icon"><i class="fab fa-facebook" style="margin-right:10px"></i><span class="label">Facebook</span></a></li>
+								<li><a href="https://github.com/orgs/zesty-io/" class="icon"><i class="fab fa-github" style="margin-right:10px"></i><span class="label">GitHub</span></a></li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="banner-content">
+								{{include app-inner}}
+							</div>
+                        </div>
+					</section>
+
+			</div>

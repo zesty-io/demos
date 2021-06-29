@@ -1,0 +1,156 @@
+
+<div class="app-container">
+  <div class="mobile">
+    <div class="content">
+      <!-- <div class="cards">
+        <div class="title">My Cards</div>
+        <div class="card-wrapper">
+          <div class="card black">
+            <div class="logo">
+              <div class="circle red"></div>
+              <div class="circle yellow"></div>
+            </div>
+            <div class="details">
+              <div class="number">1234 5678 9876 5432</div>
+              <div class="bottom">
+                <div class="name">JOHN WICK</div>
+                <div class="expiry">04/24</div>
+              </div>
+            </div>
+          </div>
+          <div class="card violet">
+            <div class="logo">
+              <div class="circle red"></div>
+              <div class="circle yellow"></div>
+            </div>
+            <div class="details">
+              <div class="number">1234 5678 9876 5432</div>
+              <div class="bottom">
+                <div class="name">JOHN WICK</div>
+                <div class="expiry">04/24</div>
+              </div>
+            </div>
+          </div>
+          <div class="card blue">
+            <div class="logo">
+              <div class="circle red"></div>
+              <div class="circle yellow"></div>
+            </div>
+            <div class="details">
+              <div class="number">1234 5678 9876 5432</div>
+              <div class="bottom">
+                <div class="name">JOHN WICK</div>
+                <div class="expiry">04/24</div>
+              </div>
+            </div>
+          </div> -->
+
+{{include photo-grid}}
+        </div>
+      </div>
+      <!--
+      <div class="transactions">
+        <div class="transaction">
+          <div class="image-wrapper"><i class="fab fa-amazon"></i></div>
+          <div class="vendor-details">
+            <div class="title">Amazon</div>
+            <div class="description">Groceries</div>
+          </div>
+          <div class="transaction-details">
+            <div class="price">$28.8</div>
+            <div class="date">21.07.2020</div>
+          </div>
+        </div>
+        <div class="transaction">
+          <div class="image-wrapper"><i class="fab fa-uber"></i></div>
+          <div class="vendor-details">
+            <div class="title">Uber</div>
+            <div class="description">Transportation</div>
+          </div>
+          <div class="transaction-details">
+            <div class="price">$28.8</div>
+            <div class="date">21.07.2020</div>
+          </div>
+        </div>
+        <div class="transaction">
+          <div class="image-wrapper"><i class="fab fa-google-pay"></i></div>
+          <div class="vendor-details">
+            <div class="title">Google Pay</div>
+            <div class="description">Transaction</div>
+          </div>
+          <div class="transaction-details">
+            <div class="price">$28.8</div>
+            <div class="date">21.07.2020</div>
+          </div>
+        </div>
+        <div class="transaction">
+          <div class="image-wrapper"><i class="fab fa-dribbble"></i></div>
+          <div class="vendor-details">
+            <div class="title">Dribbble</div>
+            <div class="description">Pro account</div>
+          </div>
+          <div class="transaction-details">
+            <div class="price">$28.8</div>
+            <div class="date">21.07.2020</div>
+          </div>
+        </div>
+        <div class="transaction">
+          <div class="image-wrapper"><i class="fab fa-google-play"></i></div>
+          <div class="vendor-details">
+            <div class="title">Google Play</div>
+            <div class="description">Software</div>
+          </div>
+          <div class="transaction-details">
+            <div class="price">$28.8</div>
+            <div class="date">21.07.2020</div>
+          </div>
+        </div>
+        <div class="transaction">
+          <div class="image-wrapper"><i class="fas fa-gift"></i></div>
+          <div class="vendor-details">
+            <div class="title">Gift</div>
+            <div class="description">toys</div>
+          </div>
+          <div class="transaction-details">
+            <div class="price">$28.8</div>
+            <div class="date">21.07.2020</div>
+          </div>
+        </div>
+        <div class="transaction">
+          <div class="image-wrapper"><i class="fab fa-dropbox"></i></div>
+          <div class="vendor-details">
+            <div class="title">Dropbox</div>
+            <div class="description">Software</div>
+          </div>
+          <div class="transaction-details">
+            <div class="price">$28.8</div>
+            <div class="date">21.07.2020</div>
+          </div>
+        </div>
+        <div class="transaction">
+          <div class="image-wrapper"><i class="fab fa-amazon"></i></div>
+          <div class="vendor-details">
+            <div class="title">Amazon</div>
+            <div class="description">Groceries</div>
+          </div>
+          <div class="transaction-details">
+            <div class="price">$28.8</div>
+            <div class="date">21.07.2020</div>
+          </div>
+        </div>
+        <div class="transaction">
+          <div class="image-wrapper"><i class="fab fa-uber"></i></div>
+          <div class="vendor-details">
+            <div class="title">Uber</div>
+            <div class="description">Transportation</div>
+          </div>
+          <div class="transaction-details">
+            <div class="price">$28.8</div>
+            <div class="date">21.07.2020</div>
+          </div>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<!-- Header -->
+<div class="header" id="myHeader">
+  <h1>Image Grid</h1>
+  <p>Click on the buttons to change the grid view.</p>
+  <button class="btn" onclick="one()"><i class="far fa-square"></i></button>
+  <button class="btn active" onclick="two()"><i class="fas fa-border-all"></i></button>
+ <!-- <button class="btn" onclick="four()">4</button> -->
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="/image-bucket-1.jpg" style="width:100%">
+    <img src="/image-bucket-2.jpg" style="width:100%">
+    <img src="/image-bucket-3.jpg" style="width:100%">
+    <img src="/image-bucket-4.jpg" style="width:100%">
+    <img src="/image-bucket-5.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/image-bucket-3.jpg" style="width:100%">
+    <img src="/image-bucket-5.jpg" style="width:100%">
+    <img src="/image-bucket-2.jpg" style="width:100%">
+    <img src="/image-bucket-1.jpg" style="width:100%">
+    <img src="/image-bucket-4.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="/image-bucket-1.jpg" style="width:100%">
+    <img src="/image-bucket-2.jpg" style="width:100%">
+    <img src="/image-bucket-5.jpg" style="width:100%">
+    <img src="/image-bucket-4.jpg" style="width:100%">
+    <img src="/image-bucket-3.jpg" style="width:100%">
+  </div>
+</div>
