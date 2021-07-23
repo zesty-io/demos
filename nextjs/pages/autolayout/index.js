@@ -3,9 +3,11 @@ import Layout from "../../components/Layout/";
 
 import { AutoLayout } from "@zesty-io/react-autolayout";
 
+// https://4q6k83l9-dev.webengine.zesty.io/zop-gun/?toJSON
+
 const IndexPage = ({ posts }) => (
   <Layout>
-    <AutoLayout instanceZUID="parsleydev-dev" modelZUID="6-ddf428-gd0xxn" />
+    <AutoLayout url={'https://4q6k83l9-dev.webengine.zesty.io/zop-gun/?toJSON'} />
   </Layout>
 );
 
